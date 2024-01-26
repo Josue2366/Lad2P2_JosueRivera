@@ -12,15 +12,18 @@ import java.util.Scanner;
  * @author josue
  */
 public class Lab2P2_JosueRivera {
-static Scanner sc= new Scanner(System.in);
-static Scanner cs = new Scanner(System.in);
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner sc= new Scanner(System.in);//numeros
+        Scanner cs = new Scanner(System.in);//Strings
+        String tipo = "";
         int cont= 0;
         ArrayList <Usuario> usuarios = new ArrayList();
+        // se crean los usuarios
         Usuario user = new Usuario("Josue","Jroberto66","Estudiantes");
         Usuario user_2 = new Usuario("Diego","D_Rosales","Maestro");
         Usuario user_3 = new Usuario ("Luis","LFCS","Biblotecario");
@@ -57,10 +60,44 @@ static Scanner cs = new Scanner(System.in);
                 }
             }
             if (cont == 1){
+                System.out.println("Usuario existente");
+                int opcion = 0;
                 cont = 0;
-                
+                if (nombre.equals("Josue")){
+                    tipo = "Estudiantes";
+                }
+                else if (nombre.equals("Diego")){
+                    tipo = "Maestro";
+                }
+                else if (nombre.equals("Luis")){
+                    tipo = "Biblotecario";
+                }
+                if (tipo.equals("Estudiantes")){
+                    System.out.println("////MENU////");
+                    System.out.println("1. Lista");
+                    System.out.println("Ingrese su opcion:");
+                    opcion = sc.nextInt();
+                }
+                else if(tipo.equals("Maestro")){
+                    System.out.println("////MENU////");
+                    System.out.println("1. Lista");
+                    System.out.println("2. crear");
+                    System.out.println("Ingrese su opcion:");
+                    opcion = sc.nextInt();
+                }
+                else if (tipo.equals("Biblotecario")){
+                    System.out.println("////MENU////");
+                    System.out.println("1. Lista");
+                    System.out.println("2. crear");
+                    System.out.println("3. Eliminar");
+                    System.out.println("4. Modificar");
+                    System.out.println("Ingrese su opcion:");
+                    opcion = sc.nextInt();
+                }
+                    
             }
             else{
+                System.out.println("Usuario no registrado");
                 System.out.println("////MENU/////");
                 System.out.println("1. iniciar seccion");
                 System.out.println("2. Salir");
