@@ -91,7 +91,17 @@ public class Lab2P2_JosueRivera {
                         opcion = sc.nextInt();
                     }
                     while(opcion == 1){
-                        listar(biblioteca);
+                        switch(opcion){
+                            case 1:
+                                if (biblioteca.isEmpty()){
+                                    System.out.println("La biblioteca vasia");
+                                    break;
+                                }else{
+                                    listar(biblioteca);
+                                    break;
+                                }
+                                
+                        }
                         System.out.println("////MENU////");
                         System.out.println("1. Lista");
                         System.out.println("2. Salir");
@@ -105,6 +115,12 @@ public class Lab2P2_JosueRivera {
                             System.out.println("Ingrese su opcion:");
                             opcion = sc.nextInt();
                         }
+                    }
+                    if (opcion == 2){
+                        System.out.println("////MENU/////");
+                        System.out.println("1. iniciar seccion");
+                        System.out.println("2. Salir");
+                        respuesta = sc.nextInt();
                     }
                     
                     
@@ -128,6 +144,10 @@ public class Lab2P2_JosueRivera {
                     while(opcion> 0 && opcion <3){
                         switch (opcion){
                             case 1:
+                                if (biblioteca.isEmpty()){
+                                    System.out.println("La biblioteca vasia");
+                                    break;
+                                }
                                 listar(biblioteca);
                                 break;
                             
@@ -224,6 +244,12 @@ public class Lab2P2_JosueRivera {
                         System.out.println("3. Salir");
                         System.out.println("Ingrese su opcion:");
                         opcion = sc.nextInt();
+                    }
+                    if (opcion == 3){
+                        System.out.println("////MENU/////");
+                        System.out.println("1. iniciar seccion");
+                        System.out.println("2. Salir");
+                        respuesta = sc.nextInt();
                     }
                 }
                 else if (tipo.equals("Biblotecario")){
