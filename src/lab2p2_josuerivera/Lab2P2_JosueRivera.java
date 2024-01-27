@@ -25,8 +25,8 @@ public class Lab2P2_JosueRivera {
         Scanner cs = new Scanner(System.in);//Strings
         String tipo = "";
         int cont= 0;
-        ArrayList <Object> biblioteca = new ArrayList();
-        ArrayList <Usuario> usuarios = new ArrayList();
+        ArrayList <Object> biblioteca = new ArrayList();//objetos dentro de la biblioteca
+        ArrayList <Usuario> usuarios = new ArrayList();//Usuarios que pueden acceder a la biblioteca
         // se crean los usuarios
         Usuario user = new Usuario("Josue","Jroberto66","Estudiantes");
         Usuario user_2 = new Usuario("Diego","D_Rosales","Maestro");
@@ -44,6 +44,7 @@ public class Lab2P2_JosueRivera {
             System.out.println("2. Salir");
             respuesta = sc.nextInt();
         }
+        //menu de ingresar la cuenta
         while(respuesta != 2){
             System.out.println("Ingrese nombre de usuario:");
             String nombre = cs.next();
@@ -63,6 +64,7 @@ public class Lab2P2_JosueRivera {
                     continue;
                 }
             }
+            //ingresan las cuentas
             if (cont == 1){
                 System.out.println("Usuario existente");
                 int opcion = 0;
@@ -76,6 +78,7 @@ public class Lab2P2_JosueRivera {
                 else if (nombre.equals("Luis")){
                     tipo = "Biblotecario";
                 }
+                // menu de estudiantes
                 if (tipo.equals("Estudiantes")){
                     System.out.println("////MENU////");
                     System.out.println("1. Lista");
@@ -125,6 +128,7 @@ public class Lab2P2_JosueRivera {
                     
                     
                 }
+                //menu de maestro
                 else if(tipo.equals("Maestro")){
                     System.out.println("////MENU////");
                     System.out.println("1. Lista");
@@ -252,6 +256,7 @@ public class Lab2P2_JosueRivera {
                         respuesta = sc.nextInt();
                     }
                 }
+                //menu de bibliotecario
                 else if (tipo.equals("Biblotecario")){
                     System.out.println("////MENU////");
                     System.out.println("1. Lista");
@@ -329,6 +334,7 @@ public class Lab2P2_JosueRivera {
                                         dispo = cs.next();
                                         Articulos articulo = new Articulos(titulo,autor,tema,fecha,dispo);
                                         biblioteca.add(articulo);
+                                        System.out.println("");
                                         break;
                                         
                                     case 3:
@@ -506,7 +512,9 @@ public class Lab2P2_JosueRivera {
             
             
         }
+        System.out.println("termino el programa");
     }
+    //metodo para listar
     public static void listar(ArrayList<Object> lista){
         System.out.println("Lista:");
         for (int i = 0; i < lista.size(); i++) {
