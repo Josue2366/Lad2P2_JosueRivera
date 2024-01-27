@@ -345,7 +345,7 @@ public class Lab2P2_JosueRivera {
                                 listar(biblioteca);
                                 System.out.println("Introduzca su opcion para eliminar:");
                                 int eliminar = sc.nextInt();
-                                while (eliminar < 0 || eliminar > biblioteca.size()){
+                                while (eliminar < 0 || eliminar >= biblioteca.size()){
                                     listar(biblioteca);
                                     System.out.println("Introduzca su opcion para eliminar:");
                                     eliminar = sc.nextInt();
@@ -361,7 +361,7 @@ public class Lab2P2_JosueRivera {
                                 listar(biblioteca);
                                 System.out.println("introduzca el usuario que quiera modificar:");
                                 int modificar = sc.nextInt();
-                                while (modificar < 0 || modificar > biblioteca.size()){
+                                while (modificar < 0 || modificar >= biblioteca.size()){
                                     listar(biblioteca);
                                     System.out.println("Introduzca su opcion para modificar:");
                                     modificar = sc.nextInt();
@@ -457,6 +457,12 @@ public class Lab2P2_JosueRivera {
                                 opcion = sc.nextInt();
                         
                     }
+                    if (opcion == 5){
+                        System.out.println("////MENU/////");
+                        System.out.println("1. iniciar seccion");
+                        System.out.println("2. Salir");
+                        respuesta = sc.nextInt();
+                    }
                 }
                     
             }
@@ -467,6 +473,7 @@ public class Lab2P2_JosueRivera {
                 System.out.println("2. Salir");
                 respuesta = sc.nextInt();
             }
+            
             
         }
     }
