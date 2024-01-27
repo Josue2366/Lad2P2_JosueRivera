@@ -47,7 +47,7 @@ public class Lab2P2_JosueRivera {
         while(respuesta != 2){
             System.out.println("Ingrese nombre de usuario:");
             String nombre = cs.next();
-            System.out.println("Ingrese la contrase;;");
+            System.out.println("Ingrese la contraseña");
             String contraseña = cs.next();
             for (int i = 0; i < usuarios.size(); i++) {
                 if (nombre.equals(usuarios.get(i).getName())){
@@ -94,7 +94,7 @@ public class Lab2P2_JosueRivera {
                         switch(opcion){
                             case 1:
                                 if (biblioteca.isEmpty()){
-                                    System.out.println("La biblioteca vasia");
+                                    System.out.println("La biblioteca esta vasia");
                                     break;
                                 }else{
                                     listar(biblioteca);
@@ -145,7 +145,7 @@ public class Lab2P2_JosueRivera {
                         switch (opcion){
                             case 1:
                                 if (biblioteca.isEmpty()){
-                                    System.out.println("La biblioteca vasia");
+                                    System.out.println("La biblioteca esta vasia");
                                     break;
                                 }
                                 listar(biblioteca);
@@ -275,6 +275,10 @@ public class Lab2P2_JosueRivera {
                     while (opcion != 5){
                         switch (opcion){
                             case 1:
+                                if (biblioteca.isEmpty()){
+                                    System.out.println("La biblioteca esta vasia");
+                                    break;
+                                }
                                 listar(biblioteca);
                                 break;
                                 
@@ -365,7 +369,7 @@ public class Lab2P2_JosueRivera {
                                 break;
                             case 3:
                                 if (biblioteca.isEmpty()){
-                                    System.out.println("La biblioteca vasia");
+                                    System.out.println("La biblioteca esta vasia");
                                     break;
                                 }
                                 listar(biblioteca);
@@ -381,7 +385,7 @@ public class Lab2P2_JosueRivera {
                                 
                             case 4:
                                 if (biblioteca.isEmpty()){
-                                    System.out.println("La biblioteca vasia");
+                                    System.out.println("La biblioteca esta vasia");
                                     break;
                                 }
                                 listar(biblioteca);
